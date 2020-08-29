@@ -1,0 +1,17 @@
+{
+  "name": "phaser3-rex-plugins-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bulat Khasanov",
+  "license": "ISC",
+  "devDependencies": {
+    "dtsmake": "0.0.10"
+  },
+  "dependencies": {
+    "phaser3-rex-plugins": "^1.1.25"
+  }
+}
