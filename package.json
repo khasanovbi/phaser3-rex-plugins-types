@@ -1,12 +1,20 @@
 {
   "name": "phaser3-rex-plugins-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bulat Khasanov",
-  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/khasanovbi/phaser3-rex-plugins-types"
+  },
+  "keywords": [
+    "phaser3",
+    "phaser3-rex-plugins"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "dtsmake": "0.0.10"
   },
