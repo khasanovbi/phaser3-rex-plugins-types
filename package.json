@@ -11,6 +11,7 @@
     "dtsmake": "0.0.10"
   },
   "dependencies": {
+    "@types/webfontloader": "^1.6.32",
     "phaser": "^3.24.1",
     "phaser3-rex-plugins": "^1.1.25"
   }
