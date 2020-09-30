@@ -63,7 +63,7 @@ Add to your `tsconfig.json` next lines:
 - [ ] Rotate to
 - [ ] Flash
 - [ ] Shake position
-- [ ] Fade out destroy
+- [x] Fade out destroy
 - [ ] Pop up
 - [ ] Scale down destroy
 - [ ] Flip
