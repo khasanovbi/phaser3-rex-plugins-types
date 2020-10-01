@@ -1,6 +1,7 @@
-declare namespace Phaser.Loader {
-    import * as WebFont from "webfontloader";
+/// <reference types="phaser" />
+/// <reference types="webfontloader" />
 
+declare namespace Phaser.Loader {
     type PartialFileConfig = Partial<Phaser.Types.Loader.FileConfig>
 
     interface WebFontConfig extends Omit<WebFont.Config, "active" | "inactive" | "fontactive" | "fontinactive" | "loading" | "fontloading"> {
