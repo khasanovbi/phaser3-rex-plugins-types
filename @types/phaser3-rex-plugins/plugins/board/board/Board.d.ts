@@ -92,6 +92,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/Board' {
         hasBlocker(tileX: any, tileY: any, tileZ: any): boolean;
         hasEdgeBlocker(tileX: any, tileY: any, tileZ: any, direction: any): any;
         getGridPoints(tileX: any, tileY: any, points: any): any;
+        setInteractive(enable?: boolean): Board;
     }
     
     import EE from "phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitter";
