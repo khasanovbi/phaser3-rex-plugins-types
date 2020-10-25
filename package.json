@@ -7,8 +7,8 @@
   },
   "author": "Bulat Khasanov",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/khasanovbi/phaser3-rex-plugins-types"
+    "type": "git",
+    "url": "https://github.com/khasanovbi/phaser3-rex-plugins-types"
   },
   "keywords": [
     "phaser3",
