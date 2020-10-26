@@ -1,8 +1,8 @@
 declare module 'phaser3-rex-plugins/utils/tween/TweenBase' {
-    import EventEmitterMethods from "phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitterMethods";
+    import EventEmitterMethods from 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitterMethods';
 
     interface TweenBaseConfig {
-        eventEmitter: Phaser.Events.EventEmitter | false
+        eventEmitter: Phaser.Events.EventEmitter | false;
     }
 
     export default class TweenBase implements EventEmitterMethods<Phaser.Tweens.Tween> {
@@ -46,6 +46,9 @@ declare module 'phaser3-rex-plugins/utils/tween/TweenBase' {
 
         removeListener(event: string | symbol, fn?: Function, context?: any, once?: boolean): this;
 
-        setEventEmitter(eventEmitter?: false | Phaser.Tweens.Tween, EventEmitterClass?: { new(): Phaser.Tweens.Tween }): this;
+        setEventEmitter(
+            eventEmitter?: false | Phaser.Tweens.Tween,
+            EventEmitterClass?: {new (): Phaser.Tweens.Tween},
+        ): this;
     }
 }

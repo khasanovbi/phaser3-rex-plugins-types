@@ -1,6 +1,6 @@
 declare module 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitterMethods' {
     export default interface EventEmitterMethods<T extends Phaser.Events.EventEmitter> {
-        setEventEmitter(eventEmitter?: T | false, EventEmitterClass?: new() => T): this;
+        setEventEmitter(eventEmitter?: T | false, EventEmitterClass?: new () => T): this;
 
         destroyEventEmitter(): this;
 

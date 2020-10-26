@@ -3,12 +3,14 @@
   "version": "0.0.3",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-check": "prettier -c \"**/*.ts\"",
+    "dev": "onchange \"**/*.ts\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "author": "Bulat Khasanov",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/khasanovbi/phaser3-rex-plugins-types"
+    "type": "git",
+    "url": "https://github.com/khasanovbi/phaser3-rex-plugins-types"
   },
   "keywords": [
     "phaser3",
@@ -16,7 +18,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "dtsmake": "0.0.10"
+    "dtsmake": "0.0.10",
+    "onchange": "^7.1.0",
+    "prettier": "^2.1.2"
   },
   "dependencies": {
     "@types/webfontloader": "^1.6.32",

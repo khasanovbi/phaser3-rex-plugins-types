@@ -1,5 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/behaviors/fade/Fade' {
-    import TweenBase from "phaser3-rex-plugins/utils/tween/TweenBase";
+    import TweenBase from 'phaser3-rex-plugins/utils/tween/TweenBase';
 
     enum Mode {
         stop = 0,
