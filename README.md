@@ -1,5 +1,8 @@
 # phaser3-rex-plugins-types
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Build Status](https://travis-ci.org/khasanovbi/phaser3-rex-plugins-types.svg?branch=master)](https://travis-ci.org/khasanovbi/phaser3-rex-plugins-types)
+
 ```
 npm i --save phaser3-rex-plugins-types
 ```
