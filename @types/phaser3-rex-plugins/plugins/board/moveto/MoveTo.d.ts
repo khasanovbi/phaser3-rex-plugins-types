@@ -5,9 +5,8 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
         chessData: any;
         scene: any;
         moveToTask: MoveToTask;
+        timeScale: any;
         resetFromJSON(o: any): MoveTo;
-        set timeScale(arg: any);
-        get timeScale(): any;
         destinationTileX: any;
         destinationTileY: any;
         destinationDirection: any;
@@ -30,14 +29,11 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
             tickingMode: any;
         };
         destroy(): void;
-        set enable(arg: any);
-        get enable(): any;
+        enable: any;
         setEnable(e: any): MoveTo;
-        set speed(arg: any);
-        get speed(): any;
+        speed: any;
         setSpeed(speed: any): MoveTo;
-        set rotateToTarget(arg: any);
-        get rotateToTarget(): any;
+        rotateToTarget: any;
         setRotateToTarget(rotateToTarget: any): MoveTo;
         setOccupiedTest(enable: any): MoveTo;
         occupiedTest: any;
@@ -73,5 +69,5 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
     }
 
     import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
-    import MoveToTask from "phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo";
+    import MoveToTask from 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo';
 }

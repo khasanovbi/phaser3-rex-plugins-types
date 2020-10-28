@@ -3,19 +3,16 @@ declare module 'phaser3-rex-plugins/plugins/board/fieldofview/FieldOfView' {
         constructor(gameObject: any, config: any);
         gameObject: any;
         chessData: any;
+        face: any;
+        cone: any;
+
         resetFromJSON(o: any): FieldOfView;
         boot(): void;
         shutdown(): FieldOfView;
         debugGraphics: any;
         destroy(): FieldOfView;
-        set face(arg: any);
-        get face(): any;
-        _face: any;
         faceAngle: number | undefined;
         setFace(direction: any): FieldOfView;
-        set cone(arg: any);
-        get cone(): any;
-        _cone: any;
         coneRad: number | undefined;
         setConeMode(mode: any): FieldOfView;
         coneMode: any;

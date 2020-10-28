@@ -13,5 +13,5 @@ declare module 'phaser3-rex-plugins/plugins/data/bank/Bank' {
         remove(uid: any): Bank;
         forEach(callback: any, scope: any): void;
         clear(): void;
-    }    
+    }
 }

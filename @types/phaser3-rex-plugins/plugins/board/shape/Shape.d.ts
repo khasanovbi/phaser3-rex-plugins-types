@@ -1,5 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/board/shape/Shape' {
-    import Board from "phaser3-rex-plugins/plugins/board/board/Board";
+    import Board from 'phaser3-rex-plugins/plugins/board/board/Board';
 
     export default class Shape {
         constructor(
@@ -9,7 +9,7 @@ declare module 'phaser3-rex-plugins/plugins/board/shape/Shape' {
             tileZ?: number,
             fillColor?: any,
             fillAlpha?: number,
-            addToBoard?: boolean
+            addToBoard?: boolean,
         );
     }
 }

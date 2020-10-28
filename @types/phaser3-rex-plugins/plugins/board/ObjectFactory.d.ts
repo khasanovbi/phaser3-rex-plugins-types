@@ -1,6 +1,6 @@
 declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
-    import Board from "phaser3-rex-plugins/plugins/board/board/Board";
-    import Chess from "phaser3-rex-plugins/plugins/board/chess/Chess";
+    import Board from 'phaser3-rex-plugins/plugins/board/board/Board';
+    import Chess from 'phaser3-rex-plugins/plugins/board/chess/Chess';
 
     export default class ObjectFactory {
         static register(type: any, callback: any): void;
@@ -10,16 +10,16 @@ declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
             width?: number;
             height?: number;
             grid?: {
-                gridType?: 'hexagonGrid' | 'quadGrid',
-                x?: number,
-                y?: number,
-                cellWidth?: number,
-                cellHeight?: number,
-                staggeraxis?: 'x' | 'y',
-                staggerindex?: 'odd' | 'even',
-                type?: 'orthogonal' | 'isometric',
-                size?: number
-            }
+                gridType?: 'hexagonGrid' | 'quadGrid';
+                x?: number;
+                y?: number;
+                cellWidth?: number;
+                cellHeight?: number;
+                staggeraxis?: 'x' | 'y';
+                staggerindex?: 'odd' | 'even';
+                type?: 'orthogonal' | 'isometric';
+                size?: number;
+            };
         }): Board;
 
         shape(
@@ -29,7 +29,7 @@ declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
             tileZ?: number,
             fillColor?: any,
             fillAlpha?: number,
-            addToBoard?: boolean
+            addToBoard?: boolean,
         ): Chess;
     }
 }

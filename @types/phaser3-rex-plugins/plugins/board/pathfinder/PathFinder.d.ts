@@ -35,6 +35,6 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
         getCost(curNode: any, preNode: any): any;
         findPath(endTileXY: any, movingPoints: any, isClosest: any, out: any): any;
         findArea(movingPoints: any, out: any): any;
-        aStarSearch(startTileXYZ: any, endTileXY: any, movingPoints: any, mode: any): any
+        aStarSearch(startTileXYZ: any, endTileXY: any, movingPoints: any, mode: any): any;
     }
 }

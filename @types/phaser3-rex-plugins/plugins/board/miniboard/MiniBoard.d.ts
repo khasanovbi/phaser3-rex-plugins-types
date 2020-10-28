@@ -1,8 +1,8 @@
 declare module 'phaser3-rex-plugins/plugins/board/miniboard/MiniBoard' {
-    import Container from "phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerLite";
-    import MainBoardReference from "phaser3-rex-plugins/plugins/board/miniboard/mainboard/MainBoardReference";
-    import Board from "phaser3-rex-plugins/plugins/board/board/Board";
-    
+    import Container from 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerLite';
+    import MainBoardReference from 'phaser3-rex-plugins/plugins/board/miniboard/mainboard/MainBoardReference';
+    import Board from 'phaser3-rex-plugins/plugins/board/board/Board';
+
     export default class MiniBoard extends Container {
         constructor(scene: any, x: any, y: any, config: any);
         board: Board;

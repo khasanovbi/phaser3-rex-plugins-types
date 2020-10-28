@@ -32,6 +32,5 @@ declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
         stop(): MoveTo;
     }
 
-    import TickTask from "phaser3-rex-plugins/plugins/utils/ticktask/TickTask";
-
+    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
 }

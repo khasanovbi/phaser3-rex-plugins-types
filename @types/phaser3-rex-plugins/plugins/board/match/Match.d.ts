@@ -23,11 +23,18 @@ declare module 'phaser3-rex-plugins/plugins/board/match/Match' {
         anyMatch(pattern: any): any;
 
         match(pattern: any, callback: any, scope: any, getFirst: any): any;
-        matchAtDir(pattern: any, startTileX: any, startTileY: any, direction: any): false | {
-            tileXY: never[];
-            direction: undefined;
-            pattern: undefined;
-        };
+        matchAtDir(
+            pattern: any,
+            startTileX: any,
+            startTileY: any,
+            direction: any,
+        ):
+            | false
+            | {
+                  tileXY: never[];
+                  direction: undefined;
+                  pattern: undefined;
+              };
         group(startTileX: any, startTileY: any, out: any): any;
     }
 }

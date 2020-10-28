@@ -18,11 +18,33 @@ declare module 'phaser3-rex-plugins/plugins/board/board/Board' {
         exists(gameObject: any): boolean;
         get chessCount(): number | undefined;
         clear(destroy: any): Board;
-        on(event: string | symbol, fn: import("phaser3-rex-plugins/node_modules/eventemitter3").ListenerFn, context?: any): Board;
-        addListener(event: string | symbol, fn: import("phaser3-rex-plugins/node_modules/eventemitter3").ListenerFn, context?: any): Board;
-        once(event: string | symbol, fn: import("phaser3-rex-plugins/node_modules/eventemitter3").ListenerFn, context?: any): Board;
-        removeListener(event: string | symbol, fn?: import("phaser3-rex-plugins/node_modules/eventemitter3").ListenerFn | undefined, context?: any, once?: boolean | undefined): Board;
-        off(event: string | symbol, fn?: import("phaser3-rex-plugins/node_modules/eventemitter3").ListenerFn | undefined, context?: any, once?: boolean | undefined): Board;
+        on(
+            event: string | symbol,
+            fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
+            context?: any,
+        ): Board;
+        addListener(
+            event: string | symbol,
+            fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
+            context?: any,
+        ): Board;
+        once(
+            event: string | symbol,
+            fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
+            context?: any,
+        ): Board;
+        removeListener(
+            event: string | symbol,
+            fn?: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn | undefined,
+            context?: any,
+            once?: boolean | undefined,
+        ): Board;
+        off(
+            event: string | symbol,
+            fn?: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn | undefined,
+            context?: any,
+            once?: boolean | undefined,
+        ): Board;
         removeAllListeners(event?: string | symbol | undefined): Board;
 
         getChessData(gameObject: any): any;
@@ -94,7 +116,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/Board' {
         getGridPoints(tileX: any, tileY: any, points: any): any;
         setInteractive(enable?: boolean): Board;
     }
-    
-    import EE from "phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitter";
-    import BoardData from "phaser3-rex-plugins/plugins/board/board/boarddata/BoardData";
+
+    import EE from 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitter';
+    import BoardData from 'phaser3-rex-plugins/plugins/board/board/boarddata/BoardData';
 }
