@@ -2,11 +2,15 @@
 /// <reference types="webfontloader" />
 
 declare namespace Phaser.Loader {
-    type PartialFileConfig = Partial<Phaser.Types.Loader.FileConfig>
+    type PartialFileConfig = Partial<Phaser.Types.Loader.FileConfig>;
 
-    interface WebFontConfig extends Omit<WebFont.Config, "active" | "inactive" | "fontactive" | "fontinactive" | "loading" | "fontloading"> {
-        testString?: string
-        testInterval?: number
+    interface WebFontConfig
+        extends Omit<
+            WebFont.Config,
+            'active' | 'inactive' | 'fontactive' | 'fontinactive' | 'loading' | 'fontloading'
+        > {
+        testString?: string;
+        testInterval?: number;
     }
 
     interface LoaderPlugin {
