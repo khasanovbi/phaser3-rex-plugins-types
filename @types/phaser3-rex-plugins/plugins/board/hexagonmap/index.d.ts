@@ -9,6 +9,6 @@ declare module 'phaser3-rex-plugins/plugins/board/hexagonmap' {
         parallelogram: GetParallelogramMapType;
     };
 
-    const hexagonMap: HexagonMapType;
-    export default hexagonMap;
+    const HexagonMap: HexagonMapType;
+    export default HexagonMap;
 }
