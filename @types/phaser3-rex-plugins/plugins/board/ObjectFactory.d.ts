@@ -1,11 +1,18 @@
 declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
+    import * as Phaser from 'phaser';
     import Board from 'phaser3-rex-plugins/plugins/board/board/Board';
     import Chess from 'phaser3-rex-plugins/plugins/board/chess/Chess';
 
     export default class ObjectFactory {
-        static register(type: any, callback: any): void;
+        scene: Phaser.Scene;
+        displayList: Phaser.GameObjects.DisplayList;
+        updateList: Phaser.GameObjects.UpdateList;
+
         constructor(scene: Phaser.Scene);
 
+        static register(type: string, callback: Function): void;
+
+        // TODO: Move outside and use declaration merging.
         board(boardSettings: {
             width?: number;
             height?: number;
