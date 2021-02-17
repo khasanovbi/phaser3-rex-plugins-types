@@ -1,5 +1,7 @@
 declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
-    export default class MoveTo extends TickTask {
+    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
+
+    export default class MoveTo<T extends Phaser.Events.EventEmitter = any> extends TickTask<T> {
         constructor(gameObject: any, config: any);
         gameObject: any;
         scene: any;
@@ -31,6 +33,4 @@ declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
         resume(): this;
         stop(): this;
     }
-
-    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
 }

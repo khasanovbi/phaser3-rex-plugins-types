@@ -1,5 +1,8 @@
 declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
-    export default class MoveTo extends TickTask {
+    import MoveToTask from 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo';
+    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
+
+    export default class MoveTo<T extends Phaser.Events.EventEmitter = any> extends TickTask<T> {
         constructor(gameObject: any, config: any);
         gameObject: any;
         chessData: any;
@@ -67,7 +70,4 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
         moveAway(tileX: any, tileY: any, moveAwayMode: any): any;
         canMoveTo(tileX: any, tileY: any, direction: any): boolean;
     }
-
-    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
-    import MoveToTask from 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo';
 }
