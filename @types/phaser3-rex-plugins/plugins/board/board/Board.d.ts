@@ -3,54 +3,54 @@ declare module 'phaser3-rex-plugins/plugins/board/board/Board' {
         constructor(scene: any, config: any);
         scene: any;
         boardData: BoardData;
-        resetFromJSON(o: any): Board;
+        resetFromJSON(o: any): this;
         isBoard: any;
         boot(): void;
-        shutdown(): Board;
-        destroy(): Board;
-        setGrid(grid: any): Board;
+        shutdown(): this;
+        destroy(): this;
+        setGrid(grid: any): this;
         grid: any;
-        setWrapMode(mode: any): Board;
+        setWrapMode(mode: any): this;
         wrapMode: any;
-        setInfinityMode(mode: any): Board;
+        setInfinityMode(mode: any): this;
         infinityMode: any;
-        setBoardSize(width: any, height: any): Board;
+        setBoardSize(width: any, height: any): this;
         exists(gameObject: any): boolean;
         get chessCount(): number | undefined;
-        clear(destroy: any): Board;
+        clear(destroy: any): this;
         on(
             event: string | symbol,
             fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
             context?: any,
-        ): Board;
+        ): this;
         addListener(
             event: string | symbol,
             fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
             context?: any,
-        ): Board;
+        ): this;
         once(
             event: string | symbol,
             fn: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn,
             context?: any,
-        ): Board;
+        ): this;
         removeListener(
             event: string | symbol,
             fn?: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn | undefined,
             context?: any,
             once?: boolean | undefined,
-        ): Board;
+        ): this;
         off(
             event: string | symbol,
             fn?: import('phaser3-rex-plugins/node_modules/eventemitter3').ListenerFn | undefined,
             context?: any,
             once?: boolean | undefined,
-        ): Board;
-        removeAllListeners(event?: string | symbol | undefined): Board;
+        ): this;
+        removeAllListeners(event?: string | symbol | undefined): this;
 
         getChessData(gameObject: any): any;
         getChessUID(gameObject: any): any;
-        setBoardWidth(width: number): Board;
-        setBoardHeight(height: number): Board;
+        setBoardWidth(width: number): this;
+        setBoardHeight(height: number): this;
         tileXYZToKey(tileX: any, tileY: any, tileZ: any, separator: any): string;
         TileXYToKey(tileX: any, tileY: any, separator: any): string;
         keyToTileXYZ(key: any, out: any, separator: any): any;
@@ -114,7 +114,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/Board' {
         hasBlocker(tileX: any, tileY: any, tileZ: any): boolean;
         hasEdgeBlocker(tileX: any, tileY: any, tileZ: any, direction: any): any;
         getGridPoints(tileX: any, tileY: any, points: any): any;
-        setInteractive(enable?: boolean): Board;
+        setInteractive(enable?: boolean): this;
     }
 
     import EE from 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitter';

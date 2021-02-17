@@ -4,10 +4,10 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/quad/Quad' {
         sides: number;
         get allDirections(): number[];
         get halfDirections(): number[];
-        setType(type: any): QuadGrid;
-        setDirectionMode(mode: any): QuadGrid;
-        setOriginPosition(x: any, y: any): QuadGrid;
-        setCellSize(width: any, height: any): QuadGrid;
+        setType(type: any): this;
+        setDirectionMode(mode: any): this;
+        setOriginPosition(x: any, y: any): this;
+        setCellSize(width: any, height: any): this;
 
         getGridPoints(tileX: any, tileY: any, points: any): any;
     }

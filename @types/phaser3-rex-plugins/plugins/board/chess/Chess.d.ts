@@ -6,11 +6,11 @@ declare module 'phaser3-rex-plugins/plugins/board/chess/Chess' {
         blocker: boolean;
         boot(): void;
         destroy(): void;
-        setBoard(board: any): Chess;
+        setBoard(board: any): this;
         get tileXYZ(): any;
-        setTileZ(tileZ: any): Chess | undefined;
-        setBlocker(value: any): Chess;
-        setBlockEdge(direction: any, value: any): Chess;
+        setTileZ(tileZ: any): this | undefined;
+        setBlocker(value: any): this;
+        setBlockEdge(direction: any, value: any): this;
         getBlockEdge(direction: any): any;
 
         getTileDirection(tileX: any, tileY: any): any;

@@ -6,7 +6,7 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
         scene: any;
         moveToTask: MoveToTask;
         timeScale: any;
-        resetFromJSON(o: any): MoveTo;
+        resetFromJSON(o: any): this;
         destinationTileX: any;
         destinationTileY: any;
         destinationDirection: any;
@@ -30,26 +30,26 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
         };
         destroy(): void;
         enable: any;
-        setEnable(e: any): MoveTo;
+        setEnable(e: any): this;
         speed: any;
-        setSpeed(speed: any): MoveTo;
+        setSpeed(speed: any): this;
         rotateToTarget: any;
-        setRotateToTarget(rotateToTarget: any): MoveTo;
-        setOccupiedTest(enable: any): MoveTo;
+        setRotateToTarget(rotateToTarget: any): this;
+        setOccupiedTest(enable: any): this;
         occupiedTest: any;
-        setBlockerTest(enable: any): MoveTo;
+        setBlockerTest(enable: any): this;
         blockerTest: any;
-        setEdgeBlockerTest(enable: any): MoveTo;
+        setEdgeBlockerTest(enable: any): this;
         edgeBlockerTest: any;
-        setMoveableTestCallback(callback: any, scope: any): MoveTo;
+        setMoveableTestCallback(callback: any, scope: any): this;
         moveableTestCallback: any;
         moveableTestScope: any;
-        setSneakEnable(enable: any): MoveTo;
+        setSneakEnable(enable: any): this;
         sneakMode: any;
         tileZSave: any;
-        pause(): MoveTo;
-        resume(): MoveTo;
-        stop(): MoveTo;
+        pause(): this;
+        resume(): this;
+        stop(): this;
         /** @private */
         private moveAlongLine;
         /** @private */
@@ -58,7 +58,7 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
         private moveNextLine;
         /** @private */
         private update;
-        start(): MoveTo;
+        start(): this;
 
         moveToward(direction: any): any;
         moveTo(tileX: any, tileY: any, direction: any): any;

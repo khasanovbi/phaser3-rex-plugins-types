@@ -6,10 +6,10 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/hexagon/Hexagon' {
         sides: number;
         get allDirections(): number[];
         get halfDirections(): number[];
-        setType(staggeraxis: any, staggerindex: any): HexagonGrid;
-        setDirectionMode(): HexagonGrid;
-        setOriginPosition(x: any, y: any): HexagonGrid;
-        setCellSize(width: any, height: any): HexagonGrid;
+        setType(staggeraxis: any, staggerindex: any): this;
+        setDirectionMode(): this;
+        setOriginPosition(x: any, y: any): this;
+        setCellSize(width: any, height: any): this;
 
         getGridPoints(tileX: any, tileY: any, points: any): any;
     }

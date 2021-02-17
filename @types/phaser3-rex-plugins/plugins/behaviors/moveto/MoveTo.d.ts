@@ -3,7 +3,7 @@ declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
         constructor(gameObject: any, config: any);
         gameObject: any;
         scene: any;
-        resetFromJSON(o: any): MoveTo;
+        resetFromJSON(o: any): this;
         timeScale: any;
         targetX: any;
         targetY: any;
@@ -18,18 +18,18 @@ declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
             tickingMode: any;
         };
         destroy(): void;
-        setEnable(e: any): MoveTo;
+        setEnable(e: any): this;
         enable: any;
-        setSpeed(speed: any): MoveTo;
+        setSpeed(speed: any): this;
         speed: any;
-        setRotateToTarget(rotateToTarget: any): MoveTo;
+        setRotateToTarget(rotateToTarget: any): this;
         rotateToTarget: any;
-        moveTo(x: any, y: any): MoveTo;
-        update(time: any, delta: any): MoveTo;
-        start(): MoveTo;
-        pause(): MoveTo;
-        resume(): MoveTo;
-        stop(): MoveTo;
+        moveTo(x: any, y: any): this;
+        update(time: any, delta: any): this;
+        start(): this;
+        pause(): this;
+        resume(): this;
+        stop(): this;
     }
 
     import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';

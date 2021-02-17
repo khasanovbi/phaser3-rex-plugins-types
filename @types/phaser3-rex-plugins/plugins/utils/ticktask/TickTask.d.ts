@@ -10,10 +10,10 @@ declare module 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask' {
         startTicking(): void;
         stopTicking(): void;
         isRunning: any;
-        start(): TickTask;
-        pause(): TickTask;
-        resume(): TickTask;
-        stop(): TickTask;
+        start(): this;
+        pause(): this;
+        resume(): this;
+        stop(): this;
         complete(): void;
     }
 }

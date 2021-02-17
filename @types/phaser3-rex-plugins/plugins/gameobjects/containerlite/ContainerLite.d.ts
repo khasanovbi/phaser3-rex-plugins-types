@@ -4,7 +4,7 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
         type: string;
         isRexContainerLite: boolean;
         syncChildrenEnable: boolean;
-        resize(width: any, height: any): ContainerLite;
+        resize(width: any, height: any): this;
         x: any;
         y: any;
         rotation: any;
@@ -19,9 +19,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
         scrollFactorX: any;
         scrollFactorY: any;
         get list(): any[];
-        add(gameObjects: any): ContainerLite;
-        remove(gameObjects: any, destroyChild: any): ContainerLite;
-        clear(destroyChild: any): ContainerLite;
+        add(gameObjects: any): this;
+        remove(gameObjects: any, destroyChild: any): this;
+        clear(destroyChild: any): this;
     }
 
     import Base from 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Base';
