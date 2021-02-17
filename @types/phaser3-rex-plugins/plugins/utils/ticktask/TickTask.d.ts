@@ -1,9 +1,9 @@
 declare module 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask' {
     import EventEmitterMethods from 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitterMethods';
 
-    type TickingMode = 0 | 1 | 2 | 'no' | 'lazy' | 'always';
+    export type TickingMode = 0 | 1 | 2 | 'no' | 'lazy' | 'always';
 
-    interface TickTaskConfig {
+    export interface TickTaskConfig {
         eventEmitter?: any;
         tickingMode?: TickingMode;
     }

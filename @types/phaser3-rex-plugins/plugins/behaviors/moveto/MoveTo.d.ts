@@ -1,36 +1,43 @@
 declare module 'phaser3-rex-plugins/plugins/behaviors/moveto/MoveTo' {
-    import TickTask from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
+    import TickTask, {TickTaskConfig} from 'phaser3-rex-plugins/plugins/utils/ticktask/TickTask';
+
+    export interface MoveToConfig extends TickTaskConfig {
+        isRunning?: boolean;
+        enable?: boolean;
+        timeScale?: number;
+        speed?: number;
+        rotateToTarget?: boolean;
+        targetX?: number;
+        targetY?: number;
+    }
 
     export default class MoveTo<T extends Phaser.Events.EventEmitter = any> extends TickTask<T> {
-        constructor(gameObject: any, config: any);
         gameObject: any;
         scene: any;
-        resetFromJSON(o: any): this;
         timeScale: any;
         targetX: any;
         targetY: any;
-        toJSON(): {
-            isRunning: any;
-            enable: any;
-            timeScale: any;
-            speed: any;
-            rotateToTarget: any;
-            targetX: any;
-            targetY: any;
-            tickingMode: any;
-        };
-        destroy(): void;
-        setEnable(e: any): this;
         enable: any;
-        setSpeed(speed: any): this;
         speed: any;
-        setRotateToTarget(rotateToTarget: any): this;
         rotateToTarget: any;
-        moveTo(x: any, y: any): this;
-        update(time: any, delta: any): this;
-        start(): this;
-        pause(): this;
-        resume(): this;
-        stop(): this;
+
+        constructor(gameObject: any, config: MoveToConfig);
+
+        resetFromJSON(config: MoveToConfig): this;
+
+        toJSON(): MoveToConfig;
+
+        destroy(): void;
+
+        setEnable(e?: boolean): this;
+
+        setSpeed(speed: number): this;
+
+        setRotateToTarget(rotateToTarget: boolean): this;
+
+        moveTo(x: number, y: number): this;
+        moveTo(config: {x: number; y: number}): this;
+
+        update(time: number, delta: number): this;
     }
 }
