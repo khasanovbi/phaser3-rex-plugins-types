@@ -1,22 +1,43 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/boarddata/BoardData' {
-    export default class BoardData {
-        shutdown(): this;
-        destroy(): this;
-        clear(): this;
-        clearBounds(): this;
-        addUID(uid: any, x: any, y: any, z: any): this;
-        getUID(x: any, y: any, z: any): any;
-        removeUID(x: any, y: any, z: any): this;
-        exists(uid: any): boolean;
-        contains(x: any, y: any, z: any): boolean;
-        getXYZ(uid: any): any;
+    type XYZ = {x: number; y: number; z?: number};
 
-        xMax: any;
-        xMin: any;
-        yMax: any;
-        yMin: any;
-        chessCount: number | undefined;
-        XYZToUID: {};
-        UIDToXYZ: {};
+    export default class BoardData {
+        private _xMax?: number;
+        private _xMin?: number;
+        private _yMax?: number;
+        private _yMin?: number;
+        chessCount: number;
+        XYZToUID: Record<number, Record<number, Record<number, any>>>;
+        UIDToXYZ: Record<any, XYZ>;
+
+        constructor();
+
+        shutdown(): this;
+
+        destroy(): this;
+
+        clear(): this;
+
+        clearBounds(): this;
+
+        addUID(uid: any, x: number, y: number, z?: number): this;
+
+        getUID(x: number, y: number, z?: number): any;
+
+        removeUID(x: number, y: number, z?: number): this;
+
+        exists(uid: any): boolean;
+
+        contains(x: number, y: number, z?: number): boolean;
+
+        getXYZ(uid: any): XYZ | undefined;
+
+        get xMax(): number;
+
+        get xMin(): number;
+
+        get yMax(): number;
+
+        get yMin(): number;
     }
 }
