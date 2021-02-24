@@ -1,7 +1,7 @@
 declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
     import * as Phaser from 'phaser';
     import Board from 'phaser3-rex-plugins/plugins/board/board/Board';
-    import Chess from 'phaser3-rex-plugins/plugins/board/chess/Chess';
+    import ChessData from 'phaser3-rex-plugins/plugins/board/chess/ChessData';
 
     export default class ObjectFactory {
         scene: Phaser.Scene;
@@ -37,6 +37,6 @@ declare module 'phaser3-rex-plugins/plugins/board/ObjectFactory' {
             fillColor?: any,
             fillAlpha?: number,
             addToBoard?: boolean,
-        ): Chess;
+        ): ChessData;
     }
 }
