@@ -1,10 +1,8 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborChess' {
-    export type GetNeighborChessType = (
+    export default function GetNeighborChess(
         chess: any,
         directions: number | string | number[],
         neighborTileZ: any,
         out?: any[],
-    ) => any[] | null;
-    const GetNeighborChess: GetNeighborChessType;
-    export default GetNeighborChess;
+    ): any[] | null;
 }

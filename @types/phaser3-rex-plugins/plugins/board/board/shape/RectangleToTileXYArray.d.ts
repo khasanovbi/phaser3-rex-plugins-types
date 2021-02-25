@@ -1,5 +1,3 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/shape/RectangleToTileXYArray' {
-    export type RectangleToTileXYArrayType = (rectangle: any, out?: any[]) => any[];
-    const RectangleToTileXYArray: RectangleToTileXYArrayType;
-    export default RectangleToTileXYArray;
+    export default function RectangleToTileXYArray(rectangle: any, out?: any[]): any[];
 }

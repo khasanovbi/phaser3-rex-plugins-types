@@ -1,133 +1,133 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/LogicMethods' {
-    import {HasBlockerType} from 'phaser3-rex-plugins/plugins/board/board/blocker/HasBlocker';
-    import {HasEdgeBlockerType} from 'phaser3-rex-plugins/plugins/board/board/blocker/HasEdgeBlocker';
+    import HasBlocker from 'phaser3-rex-plugins/plugins/board/board/blocker/HasBlocker';
+    import HasEdgeBlocker from 'phaser3-rex-plugins/plugins/board/board/blocker/HasEdgeBlocker';
     import {SetBoardHeightType} from 'phaser3-rex-plugins/plugins/board/board/boarddata/SetBoardHeight';
     import {SetBoardWidthType} from 'phaser3-rex-plugins/plugins/board/board/boarddata/SetBoardWidth';
     import {AddChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/AddChess';
-    import {GetAllChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/GetAllChess';
+    import GetAllChess from 'phaser3-rex-plugins/plugins/board/board/chess/GetAllChess';
     import {RemoveAllChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/RemoveAllChess';
     import {RemoveChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/RemoveChess';
     import {SwapChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/SwapChess';
-    import {UidToChessType} from 'phaser3-rex-plugins/plugins/board/board/chess/UidToChess';
-    import {GetEmptyTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/empty/GetEmptyTileXYArray';
-    import {GetRandomEmptyTileXYType} from 'phaser3-rex-plugins/plugins/board/board/empty/GetRandomEmptyTileXY';
-    import {GetGridPointsType} from 'phaser3-rex-plugins/plugins/board/board/gridpoints/GetGridPoints';
-    import {AreNeighborsType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/AreNeighbors';
-    import {GetNeighborChessType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborChess';
-    import {GetNeighborChessDirectionType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborChessDirection';
-    import {GetNeighborTileDirectionType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileDirection';
-    import {GetNeighborTileXYType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileXY';
-    import {GetNeighborTileXYAtAngleType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileXYAtAngle';
-    import {GetTileXYAtDirectionType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetTileXYAtDirection';
-    import {FilledRingToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/ring/FilledRingToTileXYArray';
-    import {RingToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/ring/RingToTileXYArray';
-    import {CircleToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/CircleToTileXYArray';
-    import {EllipseToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/EllipseToTileXYArray';
-    import {LineToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/LineToTileXYArray';
-    import {PolygonToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/PolygonToTileXYArray';
-    import {RectangleToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/RectangleToTileXYArray';
-    import {ShapeToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/ShapeToTileXYArray';
-    import {TriangleToTileXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/shape/TriangleToTileXYArray';
-    import {ChessToTileXYZType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/ChessToTileXYZ';
-    import {ContainsType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/Contains';
-    import {DirectionBetweenType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/DirectionBetween';
+    import UidToChess from 'phaser3-rex-plugins/plugins/board/board/chess/UidToChess';
+    import GetEmptyTileXYArray from 'phaser3-rex-plugins/plugins/board/board/empty/GetEmptyTileXYArray';
+    import GetRandomEmptyTileXY from 'phaser3-rex-plugins/plugins/board/board/empty/GetRandomEmptyTileXY';
+    import GetGridPoints from 'phaser3-rex-plugins/plugins/board/board/gridpoints/GetGridPoints';
+    import AreNeighbors from 'phaser3-rex-plugins/plugins/board/board/neighbors/AreNeighbors';
+    import GetNeighborChess from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborChess';
+    import GetNeighborChessDirection from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborChessDirection';
+    import GetNeighborTileDirection from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileDirection';
+    import GetNeighborTileXY from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileXY';
+    import GetNeighborTileXYAtAngle from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTileXYAtAngle';
+    import GetTileXYAtDirection from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetTileXYAtDirection';
+    import FilledRingToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/ring/FilledRingToTileXYArray';
+    import RingToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/ring/RingToTileXYArray';
+    import CircleToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/CircleToTileXYArray';
+    import EllipseToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/EllipseToTileXYArray';
+    import LineToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/LineToTileXYArray';
+    import PolygonToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/PolygonToTileXYArray';
+    import RectangleToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/RectangleToTileXYArray';
+    import ShapeToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/ShapeToTileXYArray';
+    import TriangleToTileXYArray from 'phaser3-rex-plugins/plugins/board/board/shape/TriangleToTileXYArray';
+    import ChessToTileXYZ from 'phaser3-rex-plugins/plugins/board/board/tileposition/ChessToTileXYZ';
+    import Contains from 'phaser3-rex-plugins/plugins/board/board/tileposition/Contains';
+    import DirectionBetween from 'phaser3-rex-plugins/plugins/board/board/tileposition/DirectionBetween';
     import {ForEachTileXYType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/ForEachTileXY';
-    import {GetDistanceType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetDistance';
-    import {GetOppositeDirectionType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetOppositeDirection';
-    import {GetWrapTileXYType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetWrapTileXY';
-    import {IsDirectionInConeType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/IsDirectionInCone';
-    import {TileXYArrayToChessArrayType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYArrayToChessArray';
-    import {TileXYToChessArrayType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYToChessArray';
-    import {TileXYZToChessType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYZToChess';
-    import {TileZToChessArrayType} from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileZToChessArray';
-    import {FitType} from 'phaser3-rex-plugins/plugins/board/board/transform/Fit';
-    import {MirrorType} from 'phaser3-rex-plugins/plugins/board/board/transform/Mirror';
-    import {OffsetType} from 'phaser3-rex-plugins/plugins/board/board/transform/Offset';
-    import {RotateType} from 'phaser3-rex-plugins/plugins/board/board/transform/Rotate';
-    import {AngleBetweenType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleBetween';
-    import {AngleSnapToDirectionType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleSnapToDirection';
-    import {AngleTowardType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleToward';
+    import GetDistance from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetDistance';
+    import GetOppositeDirection from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetOppositeDirection';
+    import GetWrapTileXY from 'phaser3-rex-plugins/plugins/board/board/tileposition/GetWrapTileXY';
+    import IsDirectionInCone from 'phaser3-rex-plugins/plugins/board/board/tileposition/IsDirectionInCone';
+    import TileXYArrayToChessArray from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYArrayToChessArray';
+    import TileXYToChessArray from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYToChessArray';
+    import TileXYZToChess from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYZToChess';
+    import TileZToChessArray from 'phaser3-rex-plugins/plugins/board/board/tileposition/TileZToChessArray';
+    import Fit from 'phaser3-rex-plugins/plugins/board/board/transform/Fit';
+    import Mirror from 'phaser3-rex-plugins/plugins/board/board/transform/Mirror';
+    import Offset from 'phaser3-rex-plugins/plugins/board/board/transform/Offset';
+    import Rotate from 'phaser3-rex-plugins/plugins/board/board/transform/Rotate';
+    import AngleBetween from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleBetween';
+    import AngleSnapToDirection from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleSnapToDirection';
+    import AngleToward from 'phaser3-rex-plugins/plugins/board/board/worldposition/AngleToward';
     import {GridAlignType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/GridAlign';
-    import {IsAngleInConeType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/IsAngleInCone';
-    import {IsOverlappingPointType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/IsOverlappingPoint';
-    import {TileXYArrayToWorldXYArrayType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYArrayToWorldXYArray';
-    import {TileXYToWorldXType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldX';
-    import {TileXYToWorldXYType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldXY';
-    import {TileXYToWorldYType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldY';
-    import {WorldXYSnapToGridType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYSnapToGrid';
-    import {WorldXYToChessType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToChess';
-    import {WorldXYToChessArrayType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToChessArray';
-    import {WorldXYToTileXType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileX';
-    import {WorldXYToTileXYType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileXY';
-    import {WorldXYToTileYType} from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileY';
-    import {GetChessDataType} from 'phaser3-rex-plugins/plugins/board/chess/GetChessData';
-    import {GetChessUIDType} from 'phaser3-rex-plugins/plugins/board/chess/GetChessUID';
-    import {KeyToTileXYZType} from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/KeyToTileXYZ';
-    import {TileXYToKeyType} from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/TileXYToKey';
-    import {TileXYZToKeyType} from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/TileXYZToKey';
+    import IsAngleInCone from 'phaser3-rex-plugins/plugins/board/board/worldposition/IsAngleInCone';
+    import IsOverlappingPoint from 'phaser3-rex-plugins/plugins/board/board/worldposition/IsOverlappingPoint';
+    import TileXYArrayToWorldXYArray from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYArrayToWorldXYArray';
+    import TileXYToWorldX from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldX';
+    import TileXYToWorldXY from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldXY';
+    import TileXYToWorldY from 'phaser3-rex-plugins/plugins/board/board/worldposition/TileXYToWorldY';
+    import WorldXYSnapToGrid from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYSnapToGrid';
+    import WorldXYToChess from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToChess';
+    import WorldXYToChessArray from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToChessArray';
+    import WorldXYToTileX from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileX';
+    import WorldXYToTileXY from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileXY';
+    import WorldXYToTileY from 'phaser3-rex-plugins/plugins/board/board/worldposition/WorldXYToTileY';
+    import GetChessData from 'phaser3-rex-plugins/plugins/board/chess/GetChessData';
+    import GetChessUID from 'phaser3-rex-plugins/plugins/board/chess/GetChessUID';
+    import KeyToTileXYZ from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/KeyToTileXYZ';
+    import TileXYToKey from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/TileXYToKey';
+    import TileXYZToKey from 'phaser3-hex-plugins/plugins/board/utils/tilexyzkey/TileXYZToKey';
 
-    export interface LogicMethodsType {
-        getChessData: GetChessDataType;
+    interface LogicMethodsType {
+        getChessData: typeof GetChessData;
 
-        getChessUID: GetChessUIDType;
+        getChessUID: typeof GetChessUID;
 
         setBoardWidth: SetBoardWidthType<this>;
 
         setBoardHeight: SetBoardHeightType<this>;
 
-        tileXYZToKey: TileXYZToKeyType;
+        tileXYZToKey: typeof TileXYZToKey;
 
-        TileXYToKey: TileXYToKeyType;
+        TileXYToKey: typeof TileXYToKey;
 
-        keyToTileXYZ: KeyToTileXYZType;
+        keyToTileXYZ: typeof KeyToTileXYZ;
 
-        tileXYToWorldX: TileXYToWorldXType;
+        tileXYToWorldX: typeof TileXYToWorldX;
 
-        tileXYToWorldY: TileXYToWorldYType;
+        tileXYToWorldY: typeof TileXYToWorldY;
 
-        tileXYToWorldXY: TileXYToWorldXYType;
+        tileXYToWorldXY: typeof TileXYToWorldXY;
 
-        tileXYArrayToWorldXYArray: TileXYArrayToWorldXYArrayType;
+        tileXYArrayToWorldXYArray: typeof TileXYArrayToWorldXYArray;
 
-        worldXYToTileX: WorldXYToTileXType;
+        worldXYToTileX: typeof WorldXYToTileX;
 
-        worldXYToTileY: WorldXYToTileYType;
+        worldXYToTileY: typeof WorldXYToTileY;
 
-        worldXYToTileXY: WorldXYToTileXYType;
+        worldXYToTileXY: typeof WorldXYToTileXY;
 
-        worldXYToChessArray: WorldXYToChessArrayType;
+        worldXYToChessArray: typeof WorldXYToChessArray;
 
-        worldXYToChess: WorldXYToChessType;
+        worldXYToChess: typeof WorldXYToChess;
 
-        worldXYSnapToGrid: WorldXYSnapToGridType;
+        worldXYSnapToGrid: typeof WorldXYSnapToGrid;
 
-        angleBetween: AngleBetweenType;
+        angleBetween: typeof AngleBetween;
 
-        isAngleInCone: IsAngleInConeType;
+        isAngleInCone: typeof IsAngleInCone;
 
-        angleToward: AngleTowardType;
+        angleToward: typeof AngleToward;
 
-        angleSnapToDirection: AngleSnapToDirectionType;
+        angleSnapToDirection: typeof AngleSnapToDirection;
 
-        isOverlappingPoint: IsOverlappingPointType;
+        isOverlappingPoint: typeof IsOverlappingPoint;
 
         gridAlign: GridAlignType<this>;
 
-        lineToTileXYArray: LineToTileXYArrayType;
+        lineToTileXYArray: typeof LineToTileXYArray;
 
-        circleToTileXYArray: CircleToTileXYArrayType;
+        circleToTileXYArray: typeof CircleToTileXYArray;
 
-        ellipseToTileXYArray: EllipseToTileXYArrayType;
+        ellipseToTileXYArray: typeof EllipseToTileXYArray;
 
-        polygonToTileXYArray: PolygonToTileXYArrayType;
+        polygonToTileXYArray: typeof PolygonToTileXYArray;
 
-        rectangleToTileXYArray: RectangleToTileXYArrayType;
+        rectangleToTileXYArray: typeof RectangleToTileXYArray;
 
-        triangleToTileXYArray: TriangleToTileXYArrayType;
+        triangleToTileXYArray: typeof TriangleToTileXYArray;
 
-        shapeToTileXYArray: ShapeToTileXYArrayType;
+        shapeToTileXYArray: typeof ShapeToTileXYArray;
 
-        uidToChess: UidToChessType;
+        uidToChess: typeof UidToChess;
 
         addChess: AddChessType<this>;
 
@@ -139,67 +139,67 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicMethods' {
 
         moveChess: AddChessType<this>;
 
-        getAllChess: GetAllChessType;
+        getAllChess: typeof GetAllChess;
 
-        contains: ContainsType;
+        contains: typeof Contains;
 
         forEachTileXY: ForEachTileXYType<this>;
 
-        getWrapTileXY: GetWrapTileXYType;
+        getWrapTileXY: typeof GetWrapTileXY;
 
-        tileXYZToChess: TileXYZToChessType;
+        tileXYZToChess: typeof TileXYZToChess;
 
-        tileXYToChessArray: TileXYToChessArrayType;
+        tileXYToChessArray: typeof TileXYToChessArray;
 
-        tileZToChessArray: TileZToChessArrayType;
+        tileZToChessArray: typeof TileZToChessArray;
 
-        tileXYArrayToChessArray: TileXYArrayToChessArrayType;
+        tileXYArrayToChessArray: typeof TileXYArrayToChessArray;
 
-        chessToTileXYZ: ChessToTileXYZType;
+        chessToTileXYZ: typeof ChessToTileXYZ;
 
-        offset: OffsetType;
+        offset: typeof Offset;
 
-        mirror: MirrorType;
+        mirror: typeof Mirror;
 
-        rotate: RotateType;
+        rotate: typeof Rotate;
 
-        getOppositeDirection: GetOppositeDirectionType;
+        getOppositeDirection: typeof GetOppositeDirection;
 
-        getDistance: GetDistanceType;
+        getDistance: typeof GetDistance;
 
-        directionBetween: DirectionBetweenType;
+        directionBetween: typeof DirectionBetween;
 
-        isDirectionInCone: IsDirectionInConeType;
+        isDirectionInCone: typeof IsDirectionInCone;
 
-        fit: FitType;
+        fit: typeof Fit;
 
-        getEmptyTileXYArray: GetEmptyTileXYArrayType;
+        getEmptyTileXYArray: typeof GetEmptyTileXYArray;
 
-        getRandomEmptyTileXY: GetRandomEmptyTileXYType;
+        getRandomEmptyTileXY: typeof GetRandomEmptyTileXY;
 
-        getTileXYAtDirection: GetTileXYAtDirectionType;
+        getTileXYAtDirection: typeof GetTileXYAtDirection;
 
-        getNeighborTileXY: GetNeighborTileXYType;
+        getNeighborTileXY: typeof GetNeighborTileXY;
 
-        getNeighborTileXYAtAngle: GetNeighborTileXYAtAngleType;
+        getNeighborTileXYAtAngle: typeof GetNeighborTileXYAtAngle;
 
-        getNeighborChess: GetNeighborChessType;
+        getNeighborChess: typeof GetNeighborChess;
 
-        getNeighborTileDirection: GetNeighborTileDirectionType;
+        getNeighborTileDirection: typeof GetNeighborTileDirection;
 
-        getNeighborChessDirection: GetNeighborChessDirectionType;
+        getNeighborChessDirection: typeof GetNeighborChessDirection;
 
-        areNeighbors: AreNeighborsType;
+        areNeighbors: typeof AreNeighbors;
 
-        ringToTileXYArray: RingToTileXYArrayType;
+        ringToTileXYArray: typeof RingToTileXYArray;
 
-        filledRingToTileXYArray: FilledRingToTileXYArrayType;
+        filledRingToTileXYArray: typeof FilledRingToTileXYArray;
 
-        hasBlocker: HasBlockerType;
+        hasBlocker: typeof HasBlocker;
 
-        hasEdgeBlocker: HasEdgeBlockerType;
+        hasEdgeBlocker: typeof HasEdgeBlocker;
 
-        getGridPoints: GetGridPointsType;
+        getGridPoints: typeof GetGridPoints;
     }
 
     const LogicMethods: LogicMethodsType;

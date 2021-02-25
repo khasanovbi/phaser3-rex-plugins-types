@@ -2,8 +2,8 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
     import * as Phaser from 'phaser';
     import EE from 'phaser3-rex-plugins/plugins/utils/eventemitter/EventEmitter';
     import BoardData from 'phaser3-rex-plugins/plugins/board/board/boarddata/BoardData';
-    import {LogicMethodsType} from 'phaser3-rex-plugins/plugins/board/board/LogicMethods';
-    import {GetTileXYAtDirectionType} from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetTileXYAtDirection';
+    import LogicMethods from 'phaser3-rex-plugins/plugins/board/board/LogicMethods';
+    import GetTileXYAtDirection from 'phaser3-rex-plugins/plugins/board/board/neighbors/GetTileXYAtDirection';
     import {SetInteractiveType} from 'phaser3-rex-plugins/plugins/board/board/input/SetInteractive';
 
     export interface BoardConfig {
@@ -18,6 +18,8 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
     interface SetInteractive {
         setInteractive: SetInteractiveType<this>;
     }
+
+    type LogicMethodsType = typeof LogicMethods;
 
     export default class Board extends EE implements LogicMethodsType, SetInteractive {
         scene: Phaser.Scene;
@@ -102,9 +104,9 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
             srcTileXY: any,
             directions: any[] | string | number,
             out?: any[],
-        ): ReturnType<GetTileXYAtDirectionType>;
+        ): ReturnType<typeof GetTileXYAtDirection>;
 
-        getNeighborTileXYAtAngle(srcTileXY: any, angle: number, out?: any[]): ReturnType<GetTileXYAtDirectionType>;
+        getNeighborTileXYAtAngle(srcTileXY: any, angle: number, out?: any[]): ReturnType<typeof GetTileXYAtDirection>;
 
         getOppositeDirection(tileX: number, tileY: number, direction: number): boolean;
 
