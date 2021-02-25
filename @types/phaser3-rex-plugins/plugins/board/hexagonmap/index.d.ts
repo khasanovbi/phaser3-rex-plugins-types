@@ -1,12 +1,12 @@
 declare module 'phaser3-rex-plugins/plugins/board/hexagonmap' {
-    import {GetParallelogramMapType} from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetParallelogramMap';
-    import {GetTriangleMapType} from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetTriangleMap';
-    import {GetHexagonMapType} from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetHexagonMap';
+    import GetParallelogramMap from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetParallelogramMap';
+    import GetTriangleMap from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetTriangleMap';
+    import GetHexagonMap from 'phaser3-rex-plugins/plugins/board/hexagonmap/GetHexagonMap';
 
-    export type HexagonMapType = {
-        hexagon: GetHexagonMapType;
-        triangle: GetTriangleMapType;
-        parallelogram: GetParallelogramMapType;
+    type HexagonMapType = {
+        hexagon: typeof GetHexagonMap;
+        triangle: typeof GetTriangleMap;
+        parallelogram: typeof GetParallelogramMap;
     };
 
     const HexagonMap: HexagonMapType;
