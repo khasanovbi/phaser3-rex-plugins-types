@@ -2,4 +2,5 @@ language: node_js
 node_js:
   - "lts/*"
 script:
-  - npm run prettier-check
+  - npm run prettier-ci
+  - npm run build
