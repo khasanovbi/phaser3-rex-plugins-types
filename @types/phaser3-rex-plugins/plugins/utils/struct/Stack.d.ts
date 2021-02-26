@@ -1,10 +1,15 @@
 declare module 'phaser3-rex-plugins/plugins/utils/struct/Stack' {
-    export default class Stack {
-        items: any[];
+    export default class Stack<T = any> {
+        items: T[];
+
         destroy(): void;
-        pop(): any;
-        push(l: any): this;
-        pushMultiple(arr: any): this;
+
+        pop(): T | null;
+
+        push(l: T): this;
+
+        pushMultiple(arr: T[]): this;
+
         clear(): this;
     }
 }
