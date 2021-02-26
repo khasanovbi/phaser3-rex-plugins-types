@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier-check": "prettier -c \"**/*.ts\"",
-    "dev": "onchange \"**/*.ts\" -- prettier --write --ignore-unknown {{changed}}"
+    "build": "tsc",
+    "prettier-ci": "prettier -c \"**/*.ts\"",
+    "prettier": "prettier -w -c **/*.d.ts && onchange \"**/*.ts\" -- prettier --write --ignore-unknown {{changed}}",
+    "dev": "tsc --watch"
   },
   "author": "Bulat Khasanov",
   "repository": {
@@ -20,7 +22,8 @@
   "devDependencies": {
     "dtsmake": "0.0.10",
     "onchange": "^7.1.0",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "typescript": "^4.2.2"
   },
   "dependencies": {
     "@types/webfontloader": "^1.6.32",
