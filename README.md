@@ -191,4 +191,4 @@ Add to your `tsconfig.json` next lines:
 
 ## Board
 
-- [ ] Board
+- [x] Board
