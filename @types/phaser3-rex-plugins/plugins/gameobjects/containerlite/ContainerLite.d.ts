@@ -9,7 +9,7 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
         syncChildrenEnable: boolean;
         mask: any;
 
-        constructor(scene: any, x: any, y: any, width: any, height: any, children: any);
+        constructor(scene: Phaser.Scene, x: number, y: number, width?: number, height?: number, children?: any);
 
         resize(width: any, height: any): this;
 
@@ -23,9 +23,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         addLocal(gameObject: any): this;
 
-        addLocalMultiple(gameObjects: any): this;
+        addLocalMultiple(gameObjects: any[]): this;
 
-        addMultiple(gameObjects: any): this;
+        addMultiple(gameObjects: any[]): this;
 
         clearMask(destroyMask: boolean | undefined): this;
 
@@ -47,7 +47,7 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         getParent(gameObject: any): any;
 
-        getRandom(startIndex: number, length: number): any;
+        getRandom(startIndex?: number, length?: number): any;
 
         getTopmostParent(gameObject: any): any;
 
@@ -83,9 +83,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         setChildLocalAlpha(gameObject: any, alpha: any): this;
 
-        setChildLocalPosition(gameObject: any, x: any, y: any): this;
+        setChildLocalPosition(gameObject: any, x: number, y: number): this;
 
-        setChildLocalRotation(gameObject: any, rotation: any): this;
+        setChildLocalRotation(gameObject: any, rotation: number): this;
 
         setChildLocalScale(gameObject: any, scaleX: any, scaleY: any): this;
 
@@ -93,13 +93,15 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         setChildMaskVisible(child: any, visible: any): this;
 
-        setChildPosition(gameObject: any, x: any, y: any): this;
+        setChildPosition(gameObject: any, x: number, y: number): this;
 
-        setChildRotation(gameObject: any, rotation: any): this;
+        setChildRotation(gameObject: any, rotation: number): this;
 
         setChildScale(gameObject: any, scaleX: any, scaleY: any): this;
 
         setChildVisible(child: any, visible: any): this;
+
+        setDepth(value: number, containerOnly?: boolean): this;
 
         setMask(mask: any): this;
 
@@ -127,9 +129,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         syncVisible(): this;
 
-        tween(tweenConfig: any): any;
+        tween(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig): Phaser.Tweens.Tween;
 
-        tweenChild(tweenConfig: any): any;
+        tweenChild(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig): Phaser.Tweens.Tween;
 
         updateChildActive(child: any): this;
 

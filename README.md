@@ -49,7 +49,7 @@ Add to your `tsconfig.json` next lines:
 
 ### Container
 
-- [ ] Container Lite
+- [x] Container Lite
 - [ ] Grid table
 
 ### DOM element

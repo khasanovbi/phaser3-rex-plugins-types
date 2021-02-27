@@ -10,7 +10,7 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Children' 
 
         getByName(name: string, recursive: boolean): any;
 
-        getRandom(startIndex: number, length: number): any;
+        getRandom(startIndex?: number, length?: number): any;
 
         getFirst(property: any, value: any, startIndex: any, endIndex: any): any;
 
