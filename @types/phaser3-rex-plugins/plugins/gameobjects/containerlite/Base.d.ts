@@ -11,10 +11,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Base' {
         flipX: boolean;
         flipY: boolean;
 
-        constructor(scene: any, x: any, y: any, width: any, height: any);
+        constructor(scene: Phaser.Scene, x: number, y: number, width?: number, height?: number);
 
-        // TODO: invalid inheritance destroy(fromScene: any): void;
-        destroy(): void;
+        destroy(fromScene?: boolean): void;
 
         contains(gameObject: any): boolean;
 

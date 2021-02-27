@@ -3,8 +3,8 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Rotation' 
         updateChildRotation(child: any): this;
         syncRotation(): this;
         resetChildRotationState(gameObject: any): this;
-        setChildRotation(gameObject: any, rotation: any): this;
-        setChildLocalRotation(gameObject: any, rotation: any): this;
+        setChildRotation(gameObject: any, rotation: number): this;
+        setChildLocalRotation(gameObject: any, rotation: number): this;
     }
 
     const Rotation: RotationType;
