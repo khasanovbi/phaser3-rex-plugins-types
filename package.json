@@ -22,12 +22,13 @@
   "devDependencies": {
     "dtsmake": "0.0.10",
     "onchange": "^7.1.0",
-    "prettier": "^2.1.2",
+    "phaser3-rex-plugins": "^1.1.39",
+    "prettier": "^2.2.1",
     "typescript": "^4.2.2"
   },
   "dependencies": {
-    "@types/webfontloader": "^1.6.32",
-    "phaser": "^3.24.1",
-    "phaser3-rex-plugins": "^1.1.25"
+    "@types/webfontloader": "*",
+    "eventemitter3": "*",
+    "phaser": "*"
   }
 }
