@@ -15,29 +15,23 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         get list(): any[];
 
-        add(gameObjects: any): this;
-
-        remove(gameObjects: any, destroyChild: any): this;
-
-        clear(destroyChild: any): this;
-
         addLocal(gameObject: any): this;
 
         addLocalMultiple(gameObjects: any[]): this;
 
         addMultiple(gameObjects: any[]): this;
 
-        clearMask(destroyMask: boolean | undefined): this;
+        clearMask(destroyMask?: boolean): this;
 
         count(property: any, value: any, startIndex: any, endIndex: any): number;
 
         getAll(property: any, value: any, startIndex: any, endIndex: any): any;
 
-        getAllChildren(out: any[] | undefined): any[];
+        getAllChildren(out?: any[]): any[];
 
-        getAllVisibleChildren(out: any[] | undefined): any[];
+        getAllVisibleChildren(out?: any[]): any[];
 
-        getByName(name: string, recursive: boolean): any;
+        getByName(name: string, recursive?: boolean): any;
 
         getChildren(): any;
 
@@ -129,9 +123,9 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/ContainerL
 
         syncVisible(): this;
 
-        tween(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig): Phaser.Tweens.Tween;
+        tween(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig | object): Phaser.Tweens.Tween;
 
-        tweenChild(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig): Phaser.Tweens.Tween;
+        tweenChild(tweenConfig: Phaser.Types.Tweens.TweenBuilderConfig | object): Phaser.Tweens.Tween;
 
         updateChildActive(child: any): this;
 
