@@ -17,6 +17,12 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Base' {
 
         contains(gameObject: any): boolean;
 
+        add(gameObjects: any): this;
+
+        remove(gameObjects: any, destroyChild?: boolean): this;
+
+        clear(destroyChild?: boolean): this;
+
         clearAlpha(): this;
 
         resetFlip(): this;
