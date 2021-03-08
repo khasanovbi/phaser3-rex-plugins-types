@@ -1,27 +1,15 @@
 /// <reference types="phaser" />
 /// <reference types="webfontloader" />
 
-declare namespace Phaser.Loader {
-    type PartialFileConfig = Partial<Phaser.Types.Loader.FileConfig>;
+import AwaitLoaderCallback from 'phaser3-rex-plugins/plugins/loader/awaitloader/AwaitLoaderCallback';
+import WebFontLoaderCallback from 'phaser3-rex-plugins/plugins/loader/awaitloader/WebFontLoaderCallback';
 
-    interface WebFontConfig
-        extends Omit<
-            WebFont.Config,
-            'active' | 'inactive' | 'fontactive' | 'fontinactive' | 'loading' | 'fontloading'
-        > {
-        testString?: string;
-        testInterval?: number;
-    }
+declare global {
+    namespace Phaser.Loader {
+        interface LoaderPlugin {
+            rexAwait: typeof AwaitLoaderCallback;
 
-    interface LoaderPlugin {
-        rexAwait(callback: (successCallback: () => void, failureCallback: () => void) => void, scope?: any): void;
-
-        rexAwait(config: PartialFileConfig): void;
-
-        rexAwait(key: string, config: PartialFileConfig): void;
-
-        rexWebFont(config: WebFontConfig): void;
-
-        rexWebFont(key: string, config: WebFontConfig): void;
+            rexWebFont: typeof WebFontLoaderCallback;
+        }
     }
 }
