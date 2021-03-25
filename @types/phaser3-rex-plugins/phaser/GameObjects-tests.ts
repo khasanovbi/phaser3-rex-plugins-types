@@ -1,3 +1,5 @@
+import InputText from 'phaser3-rex-plugins/plugins/gameobjects/dom/inputtext/InputText';
+
 function testContainerLite() {
     const scene = new Phaser.Scene({});
     let container = scene.add.rexContainerLite(0, 1);
@@ -87,4 +89,101 @@ function testContainerLite() {
     container.clearMask();
 
     container.setScrollFactor(1, 1);
+}
+
+function testInputText() {
+    const scene = new Phaser.Scene({});
+    const x = 0;
+    const y = 1;
+    const width = 10;
+    const height = 20;
+    const text = 'test text';
+    const config = {
+        x: 0,
+        y: 0,
+        width: undefined,
+        height: undefined,
+
+        type: 'text', // 'text'|'password'|'textarea'|'number'|'color'|...
+
+        // Element properties
+        id: undefined,
+        text: undefined,
+        maxLength: undefined,
+        minLength: undefined,
+        placeholder: undefined,
+        tooltip: undefined,
+        readOnly: false,
+        spellCheck: false,
+        autoComplete: 'off',
+
+        // Style properties
+        align: undefined,
+        paddingLeft: undefined,
+        paddingRight: undefined,
+        paddingTop: undefined,
+        paddingBottom: undefined,
+        fontFamily: undefined,
+        fontSize: undefined,
+        color: '#ffffff',
+        border: 0,
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        outline: 'none',
+
+        selectAll: false,
+    };
+    let inputText = scene.add.rexInputText(x, y, width, height, config);
+
+    scene.add.existing(inputText);
+
+    inputText = scene.add.rexInputText(x, y, config);
+    inputText = scene.add.rexInputText(config);
+
+    inputText.text;
+
+    inputText.setText(text);
+    inputText.text = text;
+
+    inputText.selectText();
+    inputText.scrollToBottom();
+
+    const key = 'key';
+    const value = 'value';
+    inputText.getStyle(key);
+    inputText.setStyle(key, value);
+
+    inputText.setFocus();
+    inputText.setBlur();
+
+    inputText.fontColor;
+
+    const color = '#fff';
+    inputText.setFontColor(color); // CSS color string
+
+    const length = 123;
+    inputText.maxLength;
+    inputText.maxLength = length;
+    inputText.setMaxLength(length);
+
+    inputText.minLength;
+    inputText.minLength = length;
+    inputText.setMinLength(length);
+
+    const placeholder = 'placeholder';
+    inputText.placeholder;
+    inputText.placeholder = placeholder;
+    inputText.setPlaceholder(placeholder);
+
+    const tooltip = 'tooltip';
+    inputText.tooltip;
+    inputText.tooltip = tooltip;
+    inputText.setTooltip(tooltip);
+
+    inputText.resize(width, height);
+
+    inputText.selectAll();
+
+    const scope = {};
+    inputText.on('textchange', function (inputText: InputText, e: any) {}, scope);
 }
