@@ -54,7 +54,7 @@ Add to your `tsconfig.json` next lines:
 
 ### DOM element
 
-- [ ] Input text
+- [x] Input text
 - [ ] File chooser
 - [ ] Youtube player
 
