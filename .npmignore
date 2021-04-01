@@ -1,0 +1,7 @@
+.idea
+dist
+node_modules
+*-tests.ts
+gen.sh
+.prettierrc.js
+.travis.yml
