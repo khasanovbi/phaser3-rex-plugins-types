@@ -6,11 +6,14 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/quad/Quad' {
     import GetTileX from 'phaser3-rex-plugins/plugins/utils/grid/quad/GetTileX';
     import GetTileY from 'phaser3-rex-plugins/plugins/utils/grid/quad/GetTileY';
 
-    interface QuadConfig {
-        type?: any;
-        dir?: any;
-        x?: any;
-        y?: any;
+    type OrientationType = 'orthogonal' | 0 | 'isometric' | 1 | 'staggered' | 2;
+    type DirMode = '4dir' | 4 | '8dir' | 8;
+
+    export interface QuadConfig {
+        type?: OrientationType;
+        dir?: DirMode;
+        x?: number;
+        y?: number;
         cellWidth?: number;
         cellHeight?: number;
     }
@@ -34,9 +37,9 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/quad/Quad' {
 
         resetFromJSON(o: QuadConfig): void;
 
-        setType(type: any): this;
+        setType(type: OrientationType): this;
 
-        setDirectionMode(mode: any): this;
+        setDirectionMode(mode: DirMode): this;
 
         setOriginPosition(x: any, y: any): this;
 
@@ -46,7 +49,7 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/quad/Quad' {
         get height(): any;
         set height(value: any);
 
-        setCellSize(width: any, height: any): this;
+        setCellSize(width: number, height: number): this;
 
         get cellWidth(): any;
         set cellWidth(value: any);

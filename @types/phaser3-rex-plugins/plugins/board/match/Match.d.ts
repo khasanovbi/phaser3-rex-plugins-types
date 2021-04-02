@@ -3,9 +3,9 @@ declare module 'phaser3-rex-plugins/plugins/board/match/Match' {
 
     type MethodsType = typeof Methods;
 
-    interface MatchConfig {
+    export interface MatchConfig {
         board?: any;
-        wildcard?: any;
+        wildcard?: string | number;
         dirMask?: any;
     }
 
@@ -13,8 +13,9 @@ declare module 'phaser3-rex-plugins/plugins/board/match/Match' {
         symbols: any[];
         dirMask: {};
         board: any;
+        wildcard: string | number;
 
-        constructor(config: any);
+        constructor(config: MatchConfig);
 
         resetFromJSON(o: MatchConfig): this;
 
@@ -36,13 +37,11 @@ declare module 'phaser3-rex-plugins/plugins/board/match/Match' {
 
         getSymbol(tileX: any, tileY: any): any;
 
-        forEach(callback: Function, scope: any): this;
+        forEach(callback: Function, scope?: any): this;
 
-        refreshSymbols(callback: Function, scope: any): this;
+        refreshSymbols(callback: Function, scope?: any): this;
 
         setWildcard(symbol: any): this;
-
-        wildcard: any;
 
         tileXYToKey(tileX: any, tileY: any): any;
 
@@ -50,9 +49,9 @@ declare module 'phaser3-rex-plugins/plugins/board/match/Match' {
 
         anyMatch(pattern: any): any;
 
-        group(startTileX: any, startTileY: any, out: any[] | undefined): any[];
+        group(startTileX: any, startTileY: any, out?: any[]): any[];
 
-        match(pattern: any, callback: Function, scope: any, getFirst: boolean): any;
+        match(pattern: any, callback: Function, scope: any, getFirst?: boolean): any;
 
         matchAtDir(
             pattern: any,

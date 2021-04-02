@@ -1,3 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/shape/CircleToTileXYArray' {
-    export default function CircleToTileXYArray(circle: any, out?: any[]): any[];
+    import * as Phaser from 'phaser';
+
+    export default function CircleToTileXYArray(circle: Phaser.Geom.Circle, out?: any[]): any[];
 }

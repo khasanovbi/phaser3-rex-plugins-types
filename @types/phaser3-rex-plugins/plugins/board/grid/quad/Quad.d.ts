@@ -1,5 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/board/grid/quad/Quad' {
-    import Quad from 'phaser3-rex-plugins/plugins/utils/grid/quad/Quad';
+    import Quad, {QuadConfig} from 'phaser3-rex-plugins/plugins/utils/grid/quad/Quad';
     import {SaveOriginType} from 'phaser3-rex-plugins/plugins/board/grid/utils/SaveOrigin';
     import {RestoreOriginType} from 'phaser3-rex-plugins/plugins/board/grid/utils/RestoreOrigin';
     import GetTileXYAtDirection from 'phaser3-rex-plugins/plugins/utils/grid/quad/GetTileXYAtDirection';
@@ -14,6 +14,8 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/quad/Quad' {
     import DirectionNormalize from 'phaser3-rex-plugins/plugins/board/grid/utils/DirectionNormalize';
     import RingToTileXYArray from 'phaser3-rex-plugins/plugins/utils/grid/quad/RingToTileXYArray';
     import GetGridPoints from 'phaser3-rex-plugins/plugins/board/grid/quad/GetGridPoints';
+
+    export type QuadGridConfig = QuadConfig;
 
     interface Methods {
         saveOrigin: SaveOriginType<this>;
@@ -35,7 +37,7 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/quad/Quad' {
     export default class QuadGrid extends Quad implements Methods {
         sides: number;
 
-        constructor(config: any);
+        constructor(config: QuadGridConfig);
 
         get allDirections(): number[];
 

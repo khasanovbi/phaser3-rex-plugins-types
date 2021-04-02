@@ -1,5 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/board/grid/hexagon/Hexagon' {
-    import Hexagon from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon';
+    import Hexagon, {HexagonConfig} from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon';
     import {SaveOriginType} from 'phaser3-rex-plugins/plugins/board/grid/utils/SaveOrigin';
     import {RestoreOriginType} from 'phaser3-rex-plugins/plugins/board/grid/utils/RestoreOrigin';
     import GetTileXYAtDirection from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/GetTileXYAtDirection';
@@ -14,6 +14,8 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/hexagon/Hexagon' {
     import RingToTileXYArray from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/RingToTileXYArray';
     import GetGridPoints from 'phaser3-rex-plugins/plugins/board/grid/hexagon/GetGridPoints';
     import DirectionNormalize from 'phaser3-rex-plugins/plugins/board/grid/utils/DirectionNormalize';
+
+    export type HexagonGridConfig = HexagonConfig;
 
     interface Methods {
         saveOrigin: SaveOriginType<this>;
@@ -35,7 +37,7 @@ declare module 'phaser3-rex-plugins/plugins/board/grid/hexagon/Hexagon' {
     export default class HexagonGrid extends Hexagon implements Methods {
         sides: number;
 
-        constructor(config: any);
+        constructor(config: HexagonGridConfig);
 
         get allDirections(): number[];
 

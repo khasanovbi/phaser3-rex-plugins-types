@@ -6,9 +6,12 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon' {
     import GetTileX from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/GetTileX';
     import GetTileY from 'phaser3-rex-plugins/plugins/utils/grid/hexagon/GetTileY';
 
-    interface HexagonConfig {
-        staggeraxis?: number;
-        staggerindex?: number;
+    type StaggerAxis = 'y' | 0 | 'x' | 1;
+    type StaggerIndex = 'even' | 0 | 'odd' | 1;
+
+    export interface HexagonConfig {
+        staggeraxis?: StaggerAxis;
+        staggerindex?: StaggerIndex;
         x?: number;
         y?: number;
         size?: any;
@@ -26,8 +29,8 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon' {
     }
 
     export default class Hexagon implements MethodsType {
-        staggeraxis: any;
-        staggerindex: any;
+        staggeraxis: StaggerAxis;
+        staggerindex: StaggerIndex;
         mode?: number;
         size: any;
         directions?: number;
@@ -38,7 +41,7 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon' {
 
         resetFromJSON(o: HexagonConfig): void;
 
-        setType(staggeraxis: any, staggerindex: any): this;
+        setType(staggeraxis: StaggerAxis, staggerindex: StaggerIndex): this;
 
         setDirectionMode(): this;
 
@@ -66,7 +69,7 @@ declare module 'phaser3-rex-plugins/plugins/utils/grid/hexagon/Hexagon' {
 
         getWorldX(tileX: any, tileY: any): number;
 
-        getWorldXY(tileX: any, tileY: any, out: any): any;
+        getWorldXY(tileX: any, tileY: any, out?: any): any;
 
         getWorldY(tileX: any, tileY: any): number;
     }

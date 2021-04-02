@@ -75,13 +75,13 @@ declare module 'phaser3-rex-plugins/plugins/board/moveto/MoveTo' {
 
         private update(time, delta): this;
 
-        canMoveTo(tileX: any, tileY: any, direction: any): boolean;
+        canMoveTo(tileX: any, tileY: any, direction?: any): boolean;
 
-        moveAway(tileX: any, tileY: any, moveAwayMode: any): this;
+        moveAway(tileX: any, tileY?: any, moveAwayMode?: any): this;
 
-        moveCloser(tileX: any, tileY: any): this;
+        moveCloser(tileX: any, tileY?: any): this;
 
-        moveTo(tileX: any, tileY: any, direction: any): this;
+        moveTo(tileX: any, tileY?: any, direction?: any): this;
 
         moveToRandomNeighbor(): this;
 

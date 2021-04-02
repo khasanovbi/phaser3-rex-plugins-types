@@ -5,3 +5,4 @@ node_modules
 gen.sh
 .prettierrc.js
 .travis.yml
+package-lock.json

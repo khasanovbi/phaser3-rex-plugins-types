@@ -1,6 +1,5 @@
 declare module 'phaser3-rex-plugins/plugins/board/board/tileposition/TileXYArrayToChessArray' {
-    // TODO: type overload
-    export type TileXYArrayToChessArrayType = (tileXYArray: any[], tileZ: any, out?: any[]) => any[];
-    const TileXYArrayToChessArray: TileXYArrayToChessArrayType;
+    function TileXYArrayToChessArray(tileXYArray: any[], tileZ?: any, out?: any[]): any[];
+    function TileXYArrayToChessArray(tileXYArray: any[], out?: any[]): any[];
     export default TileXYArrayToChessArray;
 }

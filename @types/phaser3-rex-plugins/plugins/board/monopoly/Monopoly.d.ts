@@ -3,7 +3,7 @@ declare module 'phaser3-rex-plugins/plugins/board/monopoly/Monopoly' {
 
     type MethodsType = typeof Methods;
 
-    interface MonopolyConfig {
+    export interface MonopolyConfig {
         preTileXY?: any;
         costCallback?: Function;
         costCallbackScope?: any;
