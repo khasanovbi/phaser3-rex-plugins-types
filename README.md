@@ -182,7 +182,7 @@ Add to your `tsconfig.json` next lines:
 ## String
 
 - [ ] [LZ string](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/lzstring/)
-- [ ] [XOR](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/xor/) 
+- [x] [XOR](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/xor/) 
 
 ## Time
 
