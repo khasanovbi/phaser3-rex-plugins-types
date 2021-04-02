@@ -6,7 +6,8 @@ declare module 'phaser3-rex-plugins/plugins/board/miniboard/MiniBoard' {
 
     type MethodsType = typeof Methods;
 
-    interface MiniBoardConfig {
+    export interface MiniBoardConfig {
+        grid?: any;
         face?: any;
         draggable?: any;
         lastTransferResult?: any;
@@ -21,7 +22,7 @@ declare module 'phaser3-rex-plugins/plugins/board/miniboard/MiniBoard' {
         scene: any;
         face: any;
 
-        constructor(scene: any, x: any, y: any, config: MiniBoardConfig);
+        constructor(scene: Phaser.Scene, x: number, y: number, config: MiniBoardConfig);
 
         resetFromJSON(o: MiniBoardConfig): this;
 
@@ -83,6 +84,6 @@ declare module 'phaser3-rex-plugins/plugins/board/miniboard/MiniBoard' {
 
         setMainBoard(mainBoard: any, tileX: any, tileY: any): this;
 
-        setOrigin(originX: any, originY: any): this;
+        setOrigin(originX?: any, originY?: any): this;
     }
 }

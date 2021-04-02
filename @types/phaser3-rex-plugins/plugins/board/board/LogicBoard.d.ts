@@ -63,15 +63,16 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         chessToTileXYZ(chess: any): any;
 
-        circleToTileXYArray(circle: any, out?: any[]): any[];
+        circleToTileXYArray(circle: Phaser.Geom.Circle, out?: any[]): any[];
 
         contains(tileX: number, tileY: number, tileZ?: number): boolean;
 
         directionBetween(chessA: any, chessB: any, round?: boolean): number;
 
-        ellipseToTileXYArray(ellipse: any, out?: any[]): any[];
+        ellipseToTileXYArray(ellipse: Phaser.Geom.Ellipse, out?: any[]): any[];
 
-        filledRingToTileXYArray(centerTileXY: any, radius: number, nearToFar?: boolean | any[], out?: any[]): any[];
+        filledRingToTileXYArray(centerTileXY: any, radius: number, nearToFar?: boolean, out?: any[]): any[];
+        filledRingToTileXYArray(centerTileXY: any, radius: number, out?: any[]): any[];
 
         fit(tileXYArray: any[]): any[];
 
@@ -83,45 +84,45 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         getChessUID(gameObject: any): any;
 
-        getDistance(tileA: any, tileB: any, roughMode: any): number;
+        getDistance(tileA: any, tileB: any, roughMode?: boolean): number;
 
         getEmptyTileXYArray(tileZ?: number, out?: any[]): any[];
 
-        getGridPoints(tileX: number, tileY: number, points: any): any;
+        getGridPoints(tileX: number, tileY: number, points?: any[]): any[];
 
         getNeighborChess(
             chess: any,
-            directions: number | string | number[],
-            neighborTileZ: any,
+            directions: number | string | number[] | null,
+            neighborTileZ?: any,
             out?: any[],
         ): any[] | null;
 
         getNeighborChessDirection(chess: any, neighborChess: any): number;
 
-        getNeighborTileDirection(srcTileXY: any, neighborTileXY: any): number;
+        getNeighborTileDirection(srcTileXY: any, neighborTileXY: any): number | null;
 
         getNeighborTileXY(
             srcTileXY: any,
-            directions: any[] | string | number,
+            directions: number[] | string | number | null,
             out?: any[],
         ): ReturnType<typeof GetTileXYAtDirection>;
 
         getNeighborTileXYAtAngle(srcTileXY: any, angle: number, out?: any[]): ReturnType<typeof GetTileXYAtDirection>;
 
-        getOppositeDirection(tileX: number, tileY: number, direction: number): boolean;
+        getOppositeDirection(tileX: number, tileY: number, direction: number): number;
 
         getRandomEmptyTileXY(tileZ?: number, out?: any[] | true): any[] | null;
 
         getTileXYAtDirection(
             chess: any,
-            directions: any[] | string | number,
+            directions: number[] | string | number | null,
             distance: number | {start: number; end: number; step: number} | number[],
             out?: any[],
         ): any[] | null;
 
         getWrapTileXY(tileX: number, tileY: number, out: any): any;
 
-        gridAlign(gameObject: any, tileX: number, tileY: number): this;
+        gridAlign(gameObject?: any, tileX?: number, tileY?: number): this;
 
         hasBlocker(tileX: number, tileY: number, tileZ?: number): boolean;
 
@@ -135,7 +136,8 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         keyToTileXYZ(key: any, out: any, separator: any): any;
 
-        lineToTileXYArray(startX: any, startY: any, endX: any, endY: any, out?: any[]): any[];
+        lineToTileXYArray(startX: number, startY: number, endX: number, endY: number, out?: any[]): any[];
+        lineToTileXYArray(line: Phaser.Geom.Line, out?: any[]): any[];
 
         mirror(tileXY: any, mode: any, originTileXY: any, out: any): any;
 
@@ -143,17 +145,17 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         offset(tileXY: any, OffsetTileX: number, OffsetTileY: number, out: any): any;
 
-        polygonToTileXYArray(polygon: any, out?: any[]): any[];
+        polygonToTileXYArray(polygon: Phaser.Geom.Polygon, out?: any[]): any[];
 
-        rectangleToTileXYArray(rectangle: any, out?: any[]): any[];
+        rectangleToTileXYArray(rectangle: Phaser.Geom.Rectangle, out?: any[]): any[];
 
         removeAllChess(destroy?: boolean, fromBoardRemove?: boolean): this;
 
         removeChess(
             gameObject: any,
-            tileX: number,
-            tileY: number,
-            tileZ: number,
+            tileX: number | null,
+            tileY: number | null,
+            tileZ: number | null,
             destroy?: boolean,
             fromBoardRemove?: boolean,
         ): this;
@@ -170,7 +172,8 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         swapChess(gameObjectA: any, gameObjectB: any, align?: boolean): this;
 
-        tileXYArrayToChessArray(tileXYArray: any[], tileZ: any, out?: any[]): any[];
+        tileXYArrayToChessArray(tileXYArray: any[], tileZ?: any, out?: any[]): any[];
+        tileXYArrayToChessArray(tileXYArray: any[], out?: any[]): any[];
 
         tileXYArrayToWorldXYArray(tileXYArray: any[], out?: any[]): any[];
 
@@ -178,7 +181,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         tileXYToWorldX(tileX: number, tileY: number): number;
 
-        tileXYToWorldXY(tileX: number, tileY: number, out: any): any;
+        tileXYToWorldXY(tileX: number, tileY: number, out?: any): any;
 
         tileXYToWorldY(tileX: number, tileY: number): number;
 
@@ -188,11 +191,11 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         tileZToChessArray(tileZ: number, out?: any[]): any[];
 
-        triangleToTileXYArray(triangle: any, out?: any[]): any[];
+        triangleToTileXYArray(triangle: Phaser.Geom.Triangle, out?: any[]): any[];
 
         uidToChess(uid: any): any;
 
-        worldXYSnapToGrid(worldX: number, worldY: number, out: any): any;
+        worldXYSnapToGrid(worldX: number, worldY: number, out?: any): any;
 
         worldXYToChess(worldX: number, worldY: number, tileZ?: number): any;
 
@@ -200,7 +203,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/LogicBoard' {
 
         worldXYToTileX(worldX: number, worldY: number): number;
 
-        worldXYToTileXY(worldX: number, worldY: number, out: any): any;
+        worldXYToTileXY(worldX: number, worldY: number, out?: any): any;
 
         worldXYToTileY(worldX: number, worldY: number): number;
 

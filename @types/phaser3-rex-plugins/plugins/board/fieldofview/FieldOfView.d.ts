@@ -6,25 +6,25 @@ declare module 'phaser3-rex-plugins/plugins/board/fieldofview/FieldOfView' {
     type ConeMode = 'direction' | 'angle' | 0 | 1;
 
     interface FieldOfViewDebugConfig {
-        graphics: any;
-        visibleLineColor: any;
-        invisibleLineColor: any;
-        log: boolean;
+        graphics?: any;
+        visibleLineColor?: any;
+        invisibleLineColor?: any;
+        log?: boolean;
     }
 
-    interface FieldOfViewConfig {
-        occupiedTest: boolean;
-        blockerTest: boolean;
-        edgeBlockerTest: boolean;
-        preTestCallback: Function;
-        preTestCallbackScope: any;
-        costCallback: Function;
-        costCallbackScope: any;
-        cost: any;
-        face: number;
-        coneMode: ConeMode;
-        cone: any;
-        debug: FieldOfViewDebugConfig;
+    export interface FieldOfViewConfig {
+        occupiedTest?: boolean;
+        blockerTest?: boolean;
+        edgeBlockerTest?: boolean;
+        preTestCallback?: Function;
+        preTestCallbackScope?: any;
+        costCallback?: Function;
+        costCallbackScope?: any;
+        cost?: any;
+        face?: number;
+        coneMode?: ConeMode;
+        cone?: any;
+        debug?: FieldOfViewDebugConfig;
     }
 
     export default class FieldOfView implements MethodsType {
@@ -75,9 +75,9 @@ declare module 'phaser3-rex-plugins/plugins/board/fieldofview/FieldOfView' {
 
         setEdgeBlockerTest(enable?: boolean): this;
 
-        setCostFunction(callback: Function, scope: any): this;
+        setCostFunction(callback: Function, scope?: any): this;
 
-        setPreTestFunction(callback: Function, scope: any): this;
+        setPreTestFunction(callback: Function, scope?: any): this;
 
         setDebugGraphics(graphics: any): this;
 
@@ -93,15 +93,15 @@ declare module 'phaser3-rex-plugins/plugins/board/fieldofview/FieldOfView' {
 
         get board(): any;
 
-        LOS(chessArray: any, visiblePoints: any, originTileXY: any, out?: any[]): any;
+        LOS(chessArray: any, visiblePoints?: any, originTileXY?: any, out?: any[]): any;
 
-        findFOV(visiblePoints: any, originTileXY: any, out?: any[]): boolean;
+        findFOV(visiblePoints?: any, originTileXY?: any, out?: any[]): any[];
 
         getCost(curTileXY: any, tileXYArray: any): any;
 
         isInCone(targetTileXY: any): boolean;
 
-        isInLOS(chess: any, visiblePoints: any, originTileXY: any): boolean;
+        isInLOS(chess: any, visiblePoints?: any, originTileXY?: any): boolean;
 
         isPathVisible(tileXYArray: any, visiblePoints: any): boolean;
 

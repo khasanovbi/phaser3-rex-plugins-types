@@ -3,7 +3,7 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
 
     type MethodsType = typeof Methods;
 
-    interface PathFinderConfig {
+    export interface PathFinderConfig {
         costCallback?: Function;
         costCallbackScope?: any;
         cost?: number;
@@ -15,6 +15,18 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
         weight?: number;
         shuffleNeighbors?: boolean;
     }
+
+    type PathModeConst = {
+        random: 0;
+        diagonal: 1;
+        straight: 2;
+        line: 3;
+        'A*': 10;
+        'A*-random': 11;
+        'A*-line': 12;
+    };
+
+    export type PathMode = keyof PathModeConst | PathModeConst[keyof PathModeConst];
 
     export default class PathFinder implements MethodsType {
         nodeManager: any;
@@ -31,6 +43,7 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
         weight: any;
 
         constructor(gameObject: any, config: PathFinderConfig);
+        constructor(config: PathFinderConfig);
 
         resetFromJSON(o: PathFinderConfig): this;
 
@@ -42,9 +55,9 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
 
         setChess(gameObject: any): this;
 
-        setCostFunction(callback: Function, scope: any): this;
+        setCostFunction(callback: Function, scope?: any): this;
 
-        setPathMode(mode: any): this;
+        setPathMode(mode: PathMode): this;
 
         setCacheCostMode(value?: any): this;
 
@@ -68,7 +81,7 @@ declare module 'phaser3-rex-plugins/plugins/board/pathfinder/PathFinder' {
 
         findArea(movingPoints: any, out?: any[]): any[];
 
-        findPath(endTileXY: any, movingPoints: any, isClosest: boolean, out?: any[]): any[];
+        findPath(endTileXY: any, movingPoints?: any, isClosest?: boolean, out?: any[]): any[];
 
         getCost(curNode: any, preNode: any): any;
 

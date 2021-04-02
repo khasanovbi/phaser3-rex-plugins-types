@@ -10,6 +10,7 @@ declare module 'phaser3-rex-plugins/plugins/board-components' {
     import Monopoly from 'phaser3-rex-plugins/plugins/board/monopoly/Monopoly';
     import MiniBoard from 'phaser3-rex-plugins/plugins/board/miniboard/MiniBoard';
     import HexagonMap from 'phaser3-rex-plugins/plugins/board/hexagonmap';
+    import CreateTileTexture from 'phaser3-rex-plugins/plugins/board/texture/CreateTileTexture';
 
     export {
         Board,
@@ -23,5 +24,6 @@ declare module 'phaser3-rex-plugins/plugins/board-components' {
         Monopoly,
         MiniBoard,
         HexagonMap,
+        CreateTileTexture,
     };
 }

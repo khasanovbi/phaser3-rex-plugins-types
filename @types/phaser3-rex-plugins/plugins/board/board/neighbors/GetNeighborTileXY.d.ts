@@ -3,7 +3,7 @@ declare module 'phaser3-rex-plugins/plugins/board/board/neighbors/GetNeighborTil
 
     export default function GetNeighborTileXY(
         srcTileXY: any,
-        directions: any[] | string | number,
+        directions: number[] | string | number | null,
         out?: any[],
     ): ReturnType<typeof GetTileXYAtDirection>;
 }
