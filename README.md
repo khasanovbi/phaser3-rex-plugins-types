@@ -27,8 +27,8 @@ Add to your `tsconfig.json` next lines:
 
 - [x] [Webfont loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/webfontloader/)
 - [x] [Await loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/awaitloader/)
-- [ ] [Script tag loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/scripttagloader/)
-- [ ] [Image URI loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/imageuriloader/)
+- [x] [Script tag loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/scripttagloader/)
+- [x] [Image URI loader](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/imageuriloader/)
 
 ## Game Object
 

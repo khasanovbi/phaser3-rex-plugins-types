@@ -56,3 +56,15 @@ function testWebFontLoaderCallback() {
         },
     });
 }
+
+function testImageURILoaderCallback() {
+    const scene = new Phaser.Scene({});
+
+    scene.load.rexImageURI('img', 'data:image/png;base64,...');
+}
+
+function testScriptTagLoaderCallback() {
+    const scene = new Phaser.Scene({});
+
+    scene.load.rexScriptTag('https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js');
+}
