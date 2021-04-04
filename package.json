@@ -20,7 +20,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "dtsmake": "0.0.10",
     "onchange": "^7.1.0",
     "phaser3-rex-plugins": "^1.1.39",
     "prettier": "^2.2.1",
