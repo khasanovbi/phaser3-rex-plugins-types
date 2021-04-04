@@ -50,7 +50,7 @@ Add to your `tsconfig.json` next lines:
 ### Graphics
 
 - [ ] [Round Rectangle](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shape-roundrectangle/)
-- [ ] [Canvas](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/canvas/)
+- [x] [Canvas](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/canvas/)
 
 ### Container
 
