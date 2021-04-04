@@ -1,4 +1,6 @@
+import * as Phaser from 'phaser';
 import InputText from 'phaser3-rex-plugins/plugins/gameobjects/dom/inputtext/InputText';
+import CanvasPlugin from 'phaser3-rex-plugins/plugins/canvas-plugin';
 
 function testContainerLite() {
     const scene = new Phaser.Scene({});
@@ -186,4 +188,84 @@ function testInputText() {
 
     const scope = {};
     inputText.on('textchange', function (inputText: InputText, e: any) {}, scope);
+}
+
+function testCanvas() {
+    const config: Phaser.Types.Core.GameConfig = {
+        plugins: {
+            global: [
+                {
+                    key: 'rexCanvasPlugin',
+                    plugin: CanvasPlugin,
+                    start: true,
+                },
+            ],
+        },
+    };
+    new Phaser.Game(config);
+    const scene = new Phaser.Scene({});
+    const x = 0;
+    const y = 0;
+    const width = 10;
+    const height = 10;
+    const canvas = scene.add.rexCanvas(x, y, width, height);
+    scene.make.rexCanvas({
+        x: 0,
+        y: 0,
+        width: 256,
+        height: 256,
+
+        origin: {x: 0.5, y: 0.5},
+        fill: null,
+
+        add: true,
+    });
+
+    canvas.clear();
+
+    canvas.fill('#fff');
+
+    canvas.getCanvas();
+
+    canvas.getContext();
+
+    canvas.canvas;
+
+    canvas.context;
+
+    canvas.needRedraw();
+
+    canvas.dirty = true;
+
+    canvas.updateTexture();
+
+    canvas.updateTexture(function (canvasElem, context) {});
+
+    const key = 'textureKey';
+    canvas.generateTexture(key, x, y, width, height);
+
+    const frame = 1;
+    canvas.loadTexture(key, frame);
+
+    const url = 'some url';
+    canvas.loadFromURL(url);
+
+    canvas.loadFromURL(url, () => {});
+
+    canvas.loadFromURLPromise(url).then(function () {});
+
+    canvas.getDataURL();
+    const encoderOptions = 0.92;
+    canvas.getDataURL(' image/png', encoderOptions);
+
+    canvas.getPixel(x, y);
+
+    const r = 10;
+    const g = 10;
+    const b = 10;
+    const a = 0.3;
+    canvas.setPixel(x, y, r, g, b);
+    canvas.setPixel(x, y, r, g, b, a);
+
+    canvas.setPixel(x, y, new Phaser.Display.Color());
 }
