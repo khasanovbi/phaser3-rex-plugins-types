@@ -2,7 +2,7 @@
 dist
 node_modules
 *-tests.ts
-gen.sh
 .prettierrc.js
 .travis.yml
 package-lock.json
+tsconfig.json
