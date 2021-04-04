@@ -1,4 +1,4 @@
-declare module 'phaser3-rex-plugins/plugins/loader/awaitloader/WebFontLoaderCallback' {
+declare module 'phaser3-rex-plugins/plugins/loader/webfontloader/WebFontLoaderCallback' {
     interface WebFontLoaderConfig
         extends Omit<
             WebFont.Config,
