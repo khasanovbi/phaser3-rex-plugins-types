@@ -1,6 +1,7 @@
 # phaser3-rex-plugins-types
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/phaser3-rex-plugins-types.svg)](https://www.npmjs.com/package/phaser3-rex-plugins-types)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Build Status](https://travis-ci.org/khasanovbi/phaser3-rex-plugins-types.svg?branch=master)](https://travis-ci.org/khasanovbi/phaser3-rex-plugins-types)
 
 Types for [phaser3-rex-plugins](https://github.com/rexrainbow/phaser3-rex-notes)
