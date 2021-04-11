@@ -35,7 +35,7 @@ Add to your `tsconfig.json` next lines:
 
 ### Sprite
 
-- [ ] [Circle mask image](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/circlemaskimage/)
+- [x] [Circle mask image](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/circlemaskimage/)
 - [ ] [Bitmap zone](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/bitmapzone/)
 - [ ] [Nine patch](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/ninepatch/)
 - [ ] [Line](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/line/)
