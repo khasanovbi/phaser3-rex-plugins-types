@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 import InputText from 'phaser3-rex-plugins/plugins/gameobjects/dom/inputtext/InputText';
 import CanvasPlugin from 'phaser3-rex-plugins/plugins/canvas-plugin';
+import CircleMaskImagePlugin from 'phaser3-rex-plugins/plugins/circlemaskimage-plugin';
 
 function testContainerLite() {
     const scene = new Phaser.Scene({});
@@ -268,4 +269,77 @@ function testCanvas() {
     canvas.setPixel(x, y, r, g, b, a);
 
     canvas.setPixel(x, y, new Phaser.Display.Color());
+}
+
+function testCircleMaskImage() {
+    const config: Phaser.Types.Core.GameConfig = {
+        plugins: {
+            global: [
+                {
+                    key: 'rexCircleMaskImagePlugin',
+                    plugin: CircleMaskImagePlugin,
+                    start: true,
+                },
+            ],
+        },
+    };
+    new Phaser.Game(config);
+    const scene = new Phaser.Scene({});
+    const x = 0;
+    const y = 0;
+    const key = 'key';
+    const frame = 1;
+    const circleMaskImage = scene.add.rexCircleMaskImage(x, y, key, frame, {
+        maskType: 0,
+        radius: undefined,
+    });
+    scene.add.rexCircleMaskImage(x, y, key, {
+        maskType: null,
+        radius: undefined,
+    });
+
+    const radius = 1;
+    const radiusX = 1;
+    const radiusY = 1;
+
+    scene.make.rexCircleMaskImage({
+        x: 0,
+        y: 0,
+        maskType: 'circle',
+        radius: {
+            x: radiusX,
+            y: radiusY,
+        },
+    });
+
+    scene.make.rexCircleMaskImage({
+        x: 0,
+        y: 0,
+        maskType: 0,
+        origin: {x: 0.5, y: 0.5},
+        add: true,
+        radius: {
+            tl: radius,
+            tr: radius,
+            bl: radius,
+            br: radius,
+        },
+    });
+
+    scene.make.rexCircleMaskImage({
+        x: 0,
+        y: 0,
+        maskType: 0,
+        radius: {
+            tl: {x: radiusX, y: radiusY},
+            tr: {x: radiusX, y: radiusY},
+            bl: {x: radiusX, y: radiusY},
+            br: {x: radiusX, y: radiusY},
+        },
+    });
+
+    const maskType = 'ellipse';
+
+    circleMaskImage.setTexture(key, frame);
+    circleMaskImage.setTexture(key, frame, maskType);
 }
