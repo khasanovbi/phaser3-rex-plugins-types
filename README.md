@@ -112,7 +112,7 @@ Add to your `tsconfig.json` next lines:
 - [ ] [Gray scale](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-grayscale/)
 - [ ] [Inverse](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-inverse/)
 - [ ] [HSL adjust](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-hsladjust/)
-- [ ] [Outline](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-outline/)
+- [x] [Outline](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-outline/)
 - [ ] [Toonify](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-toonify/)
 - [ ] [Swirl](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-swirl/)
 - [ ] [Pixelation](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-pixelation/)
