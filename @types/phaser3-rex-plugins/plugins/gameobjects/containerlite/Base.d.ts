@@ -1,7 +1,8 @@
 declare module 'phaser3-rex-plugins/plugins/gameobjects/containerlite/Base' {
     export default class Base
         extends Phaser.GameObjects.Zone
-        implements Phaser.GameObjects.Components.Alpha, Phaser.GameObjects.Components.Flip {
+        implements Phaser.GameObjects.Components.Alpha, Phaser.GameObjects.Components.Flip
+    {
         children: any[];
         alpha: number;
         alphaBottomLeft: number;

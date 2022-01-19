@@ -27,7 +27,8 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/canvas/canvas/Canvas' {
             Phaser.GameObjects.Components.Visible,
             RenderType,
             CanvasMethodsType,
-            TextureMethodsType {
+            TextureMethodsType
+    {
         resolution: number;
         dirty: boolean;
         canvas: HTMLCanvasElement;
@@ -54,7 +55,7 @@ declare module 'phaser3-rex-plugins/plugins/gameobjects/canvas/canvas/Canvas' {
         originY: number;
         pipeline: Phaser.Renderer.WebGL.WebGLPipeline;
         pipelineData: object;
-        postPipeline: Phaser.Renderer.WebGL.Pipelines.PostFXPipeline[];
+        postPipelines: Phaser.Renderer.WebGL.Pipelines.PostFXPipeline[];
         rotation: number;
         scale: number;
         scaleX: number;
