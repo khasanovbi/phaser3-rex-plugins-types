@@ -23,7 +23,7 @@
     "onchange": "^7.1.0",
     "phaser3-rex-plugins": "^1.1.39",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.2"
+    "typescript": "^4.6.0"
   },
   "dependencies": {
     "@types/webfontloader": "*",
